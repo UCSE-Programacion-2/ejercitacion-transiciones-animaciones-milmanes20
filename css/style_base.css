@@ -47,15 +47,22 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav ul li a:before{
+nav ul li a::before{
     content:'';
     background: var(--decoration-color);
     position:absolute;
     bottom:-10px; 
+    width: 0%;
+    height: 0px;
+   
+    transition: width 0.3s ease; /* Para que la transición se vea suave, le decimos que queremos animar el transform y el width, con una duración de 0.3 segundos y una función de tiempo de ease */
     /* alto y ancho=0 */
     /* transition: ; */
 }
 nav ul li a:hover::before{
+    
+    width: 100%;
+    height: 3px;
     /* ancho final */
 }
 
